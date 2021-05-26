@@ -26,6 +26,7 @@ struct MonthSunRises months_sun_rises[12];
 //after_days = 1 => zitra
 void setNextAlarm(uint8_t after_days) {
 	readCalendar();
+	
 	uint8_t dec_month = byteHexToDecimal(_month) - 1; //-1 aby leden nebyl 1 ale 0
 	uint8_t dec_date = byteHexToDecimal(_date) - 1 + after_days; //day in month (-1 -> stejny duvod)
 	
